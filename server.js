@@ -92,6 +92,11 @@ app.delete('/api/notes/:id', (req, res) => {
   res.status(200).send(`Delete request for note: ${deletedTitle} successful`);
 });
 
+// catchall url handler.  loads the index.html page.
+app.get('*', (req, res) =>
+  res.sendFile(path.join(__dirname, 'public/index.html'))
+);
+
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
