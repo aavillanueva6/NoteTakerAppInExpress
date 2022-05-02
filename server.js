@@ -54,8 +54,20 @@ app.post('/api/notes', (req, res) => {
   res.status(201).json(response);
 });
 
-app.delete('/api/notes', (req, res) => {
+app.delete('/api/notes/:id', (req, res) => {
   console.log('delete request received');
+  const id = req.params.id;
+
+  let noteIndex;
+  notes.forEach((element) => {
+    if (element.id === id) {
+      noteIndex = notes.indexOf(element);
+    }
+  });
+  console.log(notes);
+
+  notes.splice(noteIndex, 1);
+  console.log(notes);
   res.send('');
 });
 
