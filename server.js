@@ -64,11 +64,19 @@ app.delete('/api/notes/:id', (req, res) => {
       noteIndex = notes.indexOf(element);
     }
   });
-  console.log(notes);
+
+  const deletedTitle = notes[noteIndex].title;
 
   notes.splice(noteIndex, 1);
-  console.log(notes);
-  res.send('');
+  res.status(200).send(`Delete request for note: ${deletedTitle} successful`);
+  const noteString = JSON.stringify(notes);
+
+  // Write the string to a file
+  fs.writeFile(`./db/db.json`, noteString, (err) =>
+    err
+      ? console.error(err)
+      : console.log(`Note has been removed from JSON file`)
+  );
 });
 
 app.listen(PORT, () => {
