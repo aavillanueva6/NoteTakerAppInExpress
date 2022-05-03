@@ -4,7 +4,7 @@
 
 ## Description
 
-This application provides the user with a note taking web application. The application uses the express.js npm package to build and handle the server. It is deployed to heroku for live usage.
+This project provides the user with a note taking web application. The application uses the express.js npm package to build and handle the server. It is deployed to heroku for live usage.
 
 ---
 
@@ -13,7 +13,7 @@ This application provides the user with a note taking web application. The appli
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Tests](#tests)
-- [Screenshots](#screenshots)
+- [Demo](#demo)
 - [License](#license)
 - [Questions](#questions)
 
@@ -21,7 +21,7 @@ This application provides the user with a note taking web application. The appli
 
 ## Usage
 
-Visit the deployed application at [Deployed URL](http://DeployedURL).
+Visit the deployed application at [aav-note-taker-app-in-express.herokuapp.com](https://aav-note-taker-app-in-express.herokuapp.com/).
 
 When the user clicks the "Get Started" button, the user is presented with another page that contains two fields (1): Note Title and (2): Note Text, a list of previously saved notes, and a new notes button.
 
@@ -41,9 +41,11 @@ No test scripts have been developed for this application.
 
 ---
 
-## Screenshots
+## Demo
 
-Screenshots of the deployed application are below.
+A .gif demo of the deployed application is below.
+
+![gif demo of the application](./assets/images/demo.gif)
 
 ---
 
